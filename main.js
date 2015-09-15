@@ -80,6 +80,23 @@ var students = [{
  	city: 'Denver'
 }];
 
+for(var i=0; i<students.length; i++) {
+ console.log(students[i].age);
+}
+
+for(var i=0; i<students.length; i++) {
+ console.log(students[i].name + ", " + students[i].city);
+}
+
+for(var i=0; i<students.length-2; i++) {
+ console.log(students[i].name + " is from " + students[i].city);
+}
+
+for(var i=0; i<students.length; i++) {
+	if (students[i].age > 25)
+	console.log(students[i].name + " is older than 25");
+}
+
 
 
 
