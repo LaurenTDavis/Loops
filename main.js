@@ -80,22 +80,37 @@ var students = [{
  	city: 'Denver'
 }];
 
-for(var i=0; i<students.length; i++) {
- console.log(students[i].age);
-}
+// for(var i=0; i<students.length; i++) {
+//  console.log(students[i].age);
+// }
 
-for(var i=0; i<students.length; i++) {
- console.log(students[i].name + ", " + students[i].city);
-}
+var studentNames = students.map(function(element) {
+	return element.name;
+})
+console.log(studentNames);
 
-for(var i=0; i<students.length-2; i++) {
- console.log(students[i].name + " is from " + students[i].city);
-}
+// for(var i=0; i<students.length; i++) {
+//  console.log(students[i].name + ", " + students[i].city);
+// }
 
-for(var i=0; i<students.length; i++) {
-	if (students[i].age > 25)
-	console.log(students[i].name + " is older than 25");
-}
+// for(var i=0; i<students.length-2; i++) {
+//  console.log(students[i].name + " is from " + students[i].city);
+// }
+
+// for(var i=0; i<students.length; i++) {
+// 	if (students[i].age > 25)
+// 	console.log(students[i].name + " is older than 25");
+// }
+
+var studentsWhoCanDrink = students.filter(function(student) {
+	return student.age >= 21;
+}).map(function(student){
+	return student.name;
+}).map(function(student){
+	return student.toUpperCase();
+})
+
+console.log(studentsWhoCanDrink);
 
 
 
